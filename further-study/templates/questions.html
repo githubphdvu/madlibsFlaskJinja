@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>Madlibs</title>
+</head>
+<body>
+  <h1>Questions for {{ title }}</h1>
+  <form action="/story">
+    {% for p in P %}
+      <p>{{ p }}:
+        <input name="{{ p }}">
+      </p>
+    {% endfor %}
+    <input type="hidden" name="story_id" value="{{ story_id}}">
+    <button>Submit</button>
+  </form>
+</body>
+</html>

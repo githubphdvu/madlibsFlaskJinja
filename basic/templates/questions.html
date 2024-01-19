@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <title>Madlibs</title>
+</head>
+<body>
+  <h3>Fill out form below to generate a Mad-Libs story</h3>
+  <form action="/story">
+    {% for p in P %}
+      <p>{{ p }}:
+        <input name="{{ p }}">
+      </p>
+    {% endfor %}
+    <button>Submit</button>
+  </form>
+</body>
+</html>
